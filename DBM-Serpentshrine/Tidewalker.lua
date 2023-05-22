@@ -58,7 +58,7 @@ end
 end]]
 
 function mod:SPELL_AURA_APPLIED(args)
-	if args:IsSpellID(37850, 38023, 38024, 38025, 38049) then -- Watery Grave. Warmane bugged this (as of 2022/08/11) and it's not triggering the ability at random intervals. The emote still fires every 30 seconds, so use that for timer
+	if args:IsSpellID(37850, 38023, 38024, 38025, 38049) then -- Watery Grave.  bugged this (as of 2022/08/11) and it's not triggering the ability at random intervals. The emote still fires every 30 seconds, so use that for timer
 		warnGraveTargets[#warnGraveTargets + 1] = args.destName
 		self:Unschedule(showGraveTargets)
 		if self.Options.GraveIcon then

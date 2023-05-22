@@ -94,7 +94,7 @@ local function ShadowStrike(self)
 	end
 end
 
--- Warmane workaround, since emerge boss emote is not being fired
+--  workaround, since emerge boss emote is not being fired
 local function EmergeFix(self)
 	self:SetStage(1)
 	self.vb.Burrowed = false
@@ -218,7 +218,7 @@ function mod:SPELL_AURA_REMOVED(args)
 	end
 end
 
-function mod:CHAT_MSG_MONSTER_YELL(msg) -- Warmane workaround since submerge emote sometimes is not being fired
+function mod:CHAT_MSG_MONSTER_YELL(msg) --  workaround since submerge emote sometimes is not being fired
 	if msg and msg == L.YellBurrow then
 		self:SetStage(2)
 		self.vb.Burrowed = true
@@ -233,7 +233,7 @@ function mod:CHAT_MSG_MONSTER_YELL(msg) -- Warmane workaround since submerge emo
 			timerShadowStrike:Cancel()
 			preWarnShadowStrike:Cancel()
 		end
-		self:Schedule(65, EmergeFix, self)	-- Warmane workaround, since emerge boss emote is not being fired
+		self:Schedule(65, EmergeFix, self)	--  workaround, since emerge boss emote is not being fired
 	end
 end
 
@@ -247,9 +247,9 @@ function mod:CHAT_MSG_RAID_BOSS_EMOTE(msg)
 	--	warnEmergeSoon:Schedule(58.5)
 	--	timerEmerge:Start()
 	--	timerFreezingSlash:Stop()
-	--	self:Schedule(65, EmergeFix, self)	-- Warmane workaround, since emerge boss emote is not being fired
+	--	self:Schedule(65, EmergeFix, self)	--  workaround, since emerge boss emote is not being fired
 	if msg and msg:find(L.Emerge) then
-		self:Unschedule(EmergeFix)		-- Warmane workaround: failsafe if script gets fixed eventually
+		self:Unschedule(EmergeFix)		--  workaround: failsafe if script gets fixed eventually
 		self:SetStage(1)
 		self.vb.Burrowed = false
 		timerEmerge:Cancel()

@@ -309,7 +309,7 @@ function mod:SPELL_AURA_REMOVED(args)
 end
 
 function mod:SPELL_SUMMON(args)
-	if args.spellId == 63811 then -- Bomb Bot, never fired on Warmane
+	if args.spellId == 63811 then -- Bomb Bot, never fired on
 		DBM:Debug("Bomb Bot unhidden from combat log. Notify Zidras on Discord or GitHub")
 		timerBombBotSpawn:Start()
 		warnBombBotSpawn:Show()

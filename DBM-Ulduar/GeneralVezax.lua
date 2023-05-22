@@ -100,8 +100,8 @@ function mod:OnCombatStart(delay)
 	timerNextSurgeofDarkness:Start(60.0-delay) -- REVIEW! 10s variance [50-60]? (25 man NM log 2022/07/10 || S3 HM log 2022/07/21) - 60.0 || 60.0
 end
 
--- Confirmed as of 2022/07/25: CLEU SPELL_CAST_x is randomly failing on Warmane and not firing - https://www.warmane.com/bugtracker/report/112497. Resort to AURA/UNIT_SPELLCAST_x events for now.
--- EDIT 20/09/2022: after several log reviews and troubleshooting, https://www.warmane.com/bugtracker/report/112497 has been fixed serverside. Reinstating CLEU events.
+-- Confirmed as of 2022/07/25: CLEU SPELL_CAST_x is randomly failing on  and not firing - https://www..com/bugtracker/report/112497. Resort to AURA/UNIT_SPELLCAST_x events for now.
+-- EDIT 20/09/2022: after several log reviews and troubleshooting, https://www..com/bugtracker/report/112497 has been fixed serverside. Reinstating CLEU events.
 function mod:SPELL_CAST_START(args)
 	local spellId = args.spellId
 	if spellId == 62661 then	-- Searing Flames

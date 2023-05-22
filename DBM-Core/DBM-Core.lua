@@ -4350,7 +4350,7 @@ do
 	end
 
 	function DBM:ShowUpdateReminder(newVersion, newRevision, text, url)
-		urlText = url or L.UPDATEREMINDER_URL or "https://github.com/Zidras/DBM-Warmane"
+		urlText = url or L.UPDATEREMINDER_URL or "https://github.com/Zidras/DBM-"
 		if not frame then
 			createFrame()
 		else
@@ -5756,7 +5756,7 @@ function DBM:GetCurrentInstanceDifficulty()
 				return dynamicDifficulty == 0 and "normal10" or dynamicDifficulty == 1 and "heroic10" or "unknown", difficultyName.." - ", difficulty, maxPlayers
 			elseif difficulty == 2 then -- 25 players
 				return dynamicDifficulty == 0 and "normal25" or dynamicDifficulty == 1 and "heroic25" or "unknown", difficultyName.." - ", difficulty, maxPlayers
-			-- On Warmane, it was confirmed by Midna that difficulty returning only 1 or 2 is their intended behaviour: https://www.warmane.com/bugtracker/report/91065
+			-- On , it was confirmed by Midna that difficulty returning only 1 or 2 is their intended behaviour: https://www..com/bugtracker/report/91065
 			-- code below (difficulty 3 and 4 in dynamic instances) prevents GetCurrentInstanceDifficulty() from breaking on servers that correctly assign difficulty 1-4 in dynamic instances.
 			elseif difficulty == 3 then -- 10 heroic, dynamic
 				return "heroic10", difficultyName.." - ", difficulty, maxPlayers
@@ -5765,7 +5765,7 @@ function DBM:GetCurrentInstanceDifficulty()
 			end
 		else -- Non-dynamic raids
 			if difficulty == 1 then
-				-- check for Timewalking instance (workaround using GetRaidDifficulty since on Warmane all the usual APIs fail and return "normal" difficulty)
+				-- check for Timewalking instance (workaround using GetRaidDifficulty since on  all the usual APIs fail and return "normal" difficulty)
 				local raidDifficulty = GetRaidDifficulty()
 				if raidDifficulty ~= difficulty and (raidDifficulty == 2 or raidDifficulty == 4) then -- extra checks due to lack of tests and no access to a timewalking server
 					return "timewalker", difficultyName.." - ", raidDifficulty, maxPlayers
@@ -5784,7 +5784,7 @@ function DBM:GetCurrentInstanceDifficulty()
 		if difficulty == 1 then
 			return "normal5", difficultyName.." - ", difficulty, maxPlayers
 		elseif difficulty == 2 then
-			-- check for Mythic instance (workaround using GetDungeonDifficulty since on Warmane all the usual APIs fail and return "heroic" difficulty)
+			-- check for Mythic instance (workaround using GetDungeonDifficulty since on  all the usual APIs fail and return "heroic" difficulty)
 			local dungeonDifficulty = GetDungeonDifficulty()
 			if dungeonDifficulty == 3 then
 				return "mythic", difficultyName.." - ", dungeonDifficulty, maxPlayers

@@ -111,7 +111,7 @@ end
 
 function mod:SPELL_CAST_SUCCESS(args)
 	local spellId = args.spellId
-	if spellId == 62042 then		-- Stormhammer. Never fires on Warmane, nor existed on 2010 code
+	if spellId == 62042 then		-- Stormhammer. Never fires, nor existed on 2010 code
 		DBM:AddMsg("Stormhammer unhidden from combat log. Notify Zidras on Discord or GitHub")
 		timerStormhammerCD:Schedule(2)
 	elseif args:IsSpellID(62466, 62279) then	-- Lightning Charge

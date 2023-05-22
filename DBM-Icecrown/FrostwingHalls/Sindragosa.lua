@@ -178,7 +178,7 @@ local function ResetRange(self)
 	end
 end
 
--- Warmane workaround, since there is no dedicated event for Sindragosa Landing Phase, and there have been instances where UNIT_TARGET never fires
+--  workaround, since there is no dedicated event for Sindragosa Landing Phase, and there have been instances where UNIT_TARGET never fires
 local function landingPhaseWorkaround(self, timeOffset)
 	DBM:Debug("UNIT_TARGET boss1 didn't fire. Landing Phase scheduled")
 	self:SetStage(1)

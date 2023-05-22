@@ -84,7 +84,7 @@ local function Suppressers(self)
 		soundSpecWarnSuppressers:Schedule(50, "Interface\\AddOns\\DBM-Core\\sounds\\RaidAbilities\\suppressersSpawned.mp3")
 		self:Unschedule(Suppressers)
 		self:Schedule(50, Suppressers, self)
-	elseif self.vb.SuppressersWave > 4 then -- using dummy values since I have no Warmane VODs past 4 waves.
+	elseif self.vb.SuppressersWave > 4 then -- using dummy values since I have no  VODs past 4 waves.
 		timerSuppressers:Stop()
 		timerSuppressers:Start(50, self.vb.SuppressersWave)
 		specWarnSuppressers:Cancel()
@@ -224,7 +224,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(_, spellName)
 	end
 end
 
--- I have multiple logs where Yell event is missing due to a bad flag in the SQL, most likely. Best to use boss1 unit events that have proven to be reliable for Warmane, which is also much more efficient
+-- I have multiple logs where Yell event is missing due to a bad flag in the SQL, most likely. Best to use boss1 unit events that have proven to be reliable for , which is also much more efficient
 --[[function mod:CHAT_MSG_MONSTER_YELL(msg)
 	if (msg == L.YellPortals or msg:find(L.YellPortals)) and self:LatencyCheck() then
 		self:SendSync("NightmarePortal")

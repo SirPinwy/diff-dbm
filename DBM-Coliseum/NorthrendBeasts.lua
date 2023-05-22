@@ -177,7 +177,7 @@ function mod:OnCombatEnd()
 end
 
 --These remain methods since they can't reverse schedule each other as local functions
---[[ Disabling scheduling methods since worms submerge at different times on Warmane. Also, since Warmane has boss units, we also have access to the proper events
+--[[ Disabling scheduling methods since worms submerge at different times on . Also, since  has boss units, we also have access to the proper events
 ["UNIT_SPELLCAST_SUCCEEDED"] = {
 	"Churning Ground Visual-npc:34799-240 = pull:141.2/Stage 2/58.2, 5.0, 45.1, 5.0, Stage 3/31.2", -- [6]
 	"Churning Ground Visual-npc:35144-247 = pull:144.2/Stage 2/61.2, 5.0, 45.0, 5.0, Stage 3/28.2", -- [7]

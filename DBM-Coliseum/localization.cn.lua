@@ -1,7 +1,7 @@
 -- author: callmejames @《凤凰之翼》 一区藏宝海湾
 -- commit by: yaroot <yaroot AT gmail.com>
 -- modified by: Diablohu < 178.com / ngacn.cc / dreamgen.cn >
--- Simplified Chinese by hihihaheho@Warmane-Icecrown
+-- Simplified Chinese by hihihaheho@-Icecrown
 
 if GetLocale() ~= "zhCN" then return end
 

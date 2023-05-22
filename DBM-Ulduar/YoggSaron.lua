@@ -209,7 +209,7 @@ end
 
 function mod:SPELL_CAST_SUCCESS(args)
 	local spellId = args.spellId
-	if spellId == 64144 and self:GetUnitCreatureId(args.sourceGUID) == 33966 then -- Never fires on Warmane
+	if spellId == 64144 and self:GetUnitCreatureId(args.sourceGUID) == 33966 then -- Never fires
 		DBM:AddMsg("Erupt unhidden from combat log. Notify Zidras on Discord or GitHub")
 		warnCrusherTentacleSpawned:Show()
 	elseif spellId == 64465 then -- Shadow Beacon
@@ -290,7 +290,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			specWarnFervor:Show()
 			specWarnFervor:Play("targetyou")
 		end
-	elseif args:IsSpellID(63894, 64775) and self.vb.phase < 2 then	-- Shadowy Barrier of Yogg-Saron (this is happens when p2 starts, ~1s after IEEU, so correction factor is needed). Bugged on Warmane, 63894 is never applied (only removed), instead 64775 is applied to Sara
+	elseif args:IsSpellID(63894, 64775) and self.vb.phase < 2 then	-- Shadowy Barrier of Yogg-Saron (this is happens when p2 starts, ~1s after IEEU, so correction factor is needed). Bugged, 63894 is never applied (only removed), instead 64775 is applied to Sara
 		-- "<114.74 19:51:51> [CLEU] SPELL_AURA_APPLIED:0xF13000816E0007D4:Sara:0xF13000816E0007D4:Sara:64775:Shadowy Barrier:BUFF:nil:", -- [5432]
 		self:SetStage(2)
 		timerMaladyCD:Start(17.8)	-- (25 man NM log 2022/07/10 || S3 HM log 2022/07/21) - 18 || 18.0 ; 17.9 ; 17.8

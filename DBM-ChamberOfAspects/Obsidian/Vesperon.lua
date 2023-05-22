@@ -9,7 +9,7 @@ mod:SetHotfixNoticeRev(20221012000000)
 mod:SetMinSyncRevision(20221012000000)
 mod:DisableMultiBossPulls()
 
---mod:RegisterCombat("combat") -- Don't use IEEU, because on Warmane 3 Drakes, Sartharion NOT is engaged first, but Tenebron > Shadron > Vesperon > Sartharion (Sartharion will end up on boss1).
+--mod:RegisterCombat("combat") -- Don't use IEEU, because on  3 Drakes, Sartharion NOT is engaged first, but Tenebron > Shadron > Vesperon > Sartharion (Sartharion will end up on boss1).
 mod:RegisterCombat("yell", L.YellVesperonPull)
 
 mod:RegisterEventsInCombat(

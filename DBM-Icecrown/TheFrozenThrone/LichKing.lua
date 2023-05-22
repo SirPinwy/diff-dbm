@@ -621,7 +621,7 @@ function mod:SPELL_SUMMON(args)
 		warnShamblingSoon:Schedule(55)
 		timerShamblingHorror:Start()
 		timerEnrageCD:Start(12.3, shamblingCount, args.destGUID) -- -20s from Shambling Enrage summon. 34.4 || 34.3; 32.3; 33.4
-		timerEnrageCD:Schedule(12.3+21, nil, shamblingCount, args.destGUID) -- apparently on Warmane if you stun on pre-cast, it skips the Enrage. Couldn't repro on test server nor validate it, but doesn't really hurt because SCS has Restart method
+		timerEnrageCD:Schedule(12.3+21, nil, shamblingCount, args.destGUID) -- apparently on  if you stun on pre-cast, it skips the Enrage. Couldn't repro on test server nor validate it, but doesn't really hurt because SCS has Restart method
 	end
 end
 

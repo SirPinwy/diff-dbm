@@ -134,7 +134,7 @@ function mod:SPELL_CAST_START(args)
 	elseif spellId == 62273 then			-- Rune of Summoning
 		warnRuneofSummoning:Show()
 		timerRuneofSummoning:Start()
-	elseif spellId == 61973 then	-- Rune of Power (cast success not fired on Warmane, and not correct to check target after cast either)
+	elseif spellId == 61973 then	-- Rune of Power (cast success not fired on , and not correct to check target after cast either)
 		self:BossTargetScanner(32927, "RuneTarget", 0.1, 16, true, true)--Scan only boss unitIDs, scan only hostile targets
 		timerRuneofPowerCast:Start()
 	end

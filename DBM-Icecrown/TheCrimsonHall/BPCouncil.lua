@@ -67,7 +67,7 @@ local yellVortex				= mod:NewYellMe(72037)
 local specWarnVortexNear		= mod:NewSpecialWarningClose(72037, nil, nil, nil, 1, 2)
 local specWarnEmpoweredShockV	= mod:NewSpecialWarningMoveAway(72039, nil, nil, nil, 1, 2)
 
-local timerShockVortex			= mod:NewCDTimer(18.2, 72037, nil, nil, nil, 3, nil, nil, true) -- ~5s variance [18.2 - 22.7]. Added "keep" arg. (2 Warmane 2021 logs || 25H Lordaeron 2022/07/09 || 10N Icecrown 2022/08/25 || 25H Lordaeron 2022/09/07 || 25H Lordaeron 2022/10/21) - 19-22s || 20.3, 22.6, 21.3, 19.6, ..., 19.4, 19.7 || 18.5, 18.6 || pull:76.0 (Empowered 30.1), 18.4, 19.4, 22.0, 19.7, 22.7 || pull:76.3 (Empowered 16.3 + 30.0), 19.9, 18.2, 22.2
+local timerShockVortex			= mod:NewCDTimer(18.2, 72037, nil, nil, nil, 3, nil, nil, true) -- ~5s variance [18.2 - 22.7]. Added "keep" arg. (2  2021 logs || 25H Lordaeron 2022/07/09 || 10N Icecrown 2022/08/25 || 25H Lordaeron 2022/09/07 || 25H Lordaeron 2022/10/21) - 19-22s || 20.3, 22.6, 21.3, 19.6, ..., 19.4, 19.7 || 18.5, 18.6 || pull:76.0 (Empowered 30.1), 18.4, 19.4, 22.0, 19.7, 22.7 || pull:76.3 (Empowered 16.3 + 30.0), 19.9, 18.2, 22.2
 local timerEmpoweredShockVortex	= mod:NewCDTimer(30, 72039, nil, nil, nil, 3, nil, DBM_COMMON_L.DEADLY_ICON, true) -- Added "keep" arg. (25H Lordaeron 2022/09/07) - pull:15.9, 30.0, 152.4 (20.1 non-empowered)
 
 local soundSpecWarnVortexNear	= mod:NewSoundClose(72037)

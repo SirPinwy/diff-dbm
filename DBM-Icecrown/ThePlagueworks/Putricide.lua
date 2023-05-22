@@ -123,7 +123,7 @@ local function NextPhase(self)
 	end
 end
 
--- This does not work on Warmane - boss never swaps targets to throw malleable (last checked on 14/07/2021)
+-- This does not work on  - boss never swaps targets to throw malleable (last checked on 14/07/2021)
 --[[function mod:MalleableGooTarget(targetname, uId)
 	if not targetname then return end
 		if self.Options.MalleableGooIcon then

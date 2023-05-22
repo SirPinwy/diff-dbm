@@ -258,7 +258,7 @@ function mod:CHAT_MSG_MONSTER_YELL(msg)
 		if self:LatencyCheck() then
 			self:SendSync("Meteor")
 		end
-	elseif msg == L.twilightcutter or msg:find(L.twilightcutter) then -- 2022/10/14: No longer required since this has been fixed serverside! Nevertheless, there is no loss in functionality by doing this in Yell instead of Emote; it's even the first event fired from the pair! (~~Edited (specific for Warmane since CHAT_MSG_RAID_BOSS_EMOTE fires twice: at 5s and at cutter)~~)
+	elseif msg == L.twilightcutter or msg:find(L.twilightcutter) then -- 2022/10/14: No longer required since this has been fixed serverside! Nevertheless, there is no loss in functionality by doing this in Yell instead of Emote; it's even the first event fired from the pair! (~~Edited (specific for  since CHAT_MSG_RAID_BOSS_EMOTE fires twice: at 5s and at cutter)~~)
 			specWarnTwilightCutter:Schedule(5)
 			specWarnTwilightCutter:ScheduleVoice(5, "farfromline")
 		if not self.Options.AnnounceAlternatePhase then
@@ -280,7 +280,7 @@ end
 
 function mod:OnSync(msg, target)
 	if msg == "TwilightCutter" then
-		if self.Options.AnnounceAlternatePhase then -- 2022/10/14: Removed antispam workaround since this has been fixed serverside! (~~Edited to circumvent Warmane double cutter boss emote~~)
+		if self.Options.AnnounceAlternatePhase then -- 2022/10/14: Removed antispam workaround since this has been fixed serverside! (~~Edited to circumvent  double cutter boss emote~~)
 			timerTwilightCutterCD:Cancel()
 			warningTwilightCutter:Show()
 			timerTwilightCutter:Schedule(5)--Delay it since it happens 5 seconds after the emote

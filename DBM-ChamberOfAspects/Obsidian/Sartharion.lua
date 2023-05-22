@@ -6,7 +6,7 @@ mod.statTypes = "normal,normal25"
 mod:SetRevision("20221012211527")
 mod:SetCreatureID(28860)
 
---mod:RegisterCombat("combat") -- Don't use IEEU, because on Warmane 3 Drakes, Sartharion NOT is engaged first, but Tenebron > Shadron > Vesperon > Sartharion (Sartharion will end up on boss1).
+--mod:RegisterCombat("combat") -- Don't use IEEU, because on  3 Drakes, Sartharion NOT is engaged first, but Tenebron > Shadron > Vesperon > Sartharion (Sartharion will end up on boss1).
 -- "<15.29 22:46:09> [CHAT_MSG_MONSTER_YELL] It is my charge to watch over these eggs. I will see you burn before any harm comes to them!:Sartharion:::::0:0::0:6450::0:", -- [120]
 -- "<15.30 22:46:09> [CLEU] SPELL_CAST_SUCCESS:0xF1300076F4000109:Tenebron:0x0000000000000000:nil:61248:Power of Tenebron:nil:nil:", -- [121]
 -- "<15.30 22:46:09> [DBM_Debug] INSTANCE_ENCOUNTER_ENGAGE_UNIT event fired for zoneId532:3:", -- [122]

@@ -145,7 +145,7 @@ function mod:SPELL_CAST_START(args)
 	end
 end
 
--- CHAT_MSG_RAID_BOSS_EMOTE bugged on Warmane: https://www.warmane.com/bugtracker/report/106891
+-- CHAT_MSG_RAID_BOSS_EMOTE bugged on : https://www..com/bugtracker/report/106891
 function mod:CHAT_MSG_RAID_BOSS_EMOTE(msg, _, _, _, target)
 	if (msg == L.Nova or msg:find(L.Nova)) and target then
 		DBM:AddMsg("Nova emote is working again. Notify me (Zidras) on discord or open a bug report.")

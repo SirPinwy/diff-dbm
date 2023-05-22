@@ -649,7 +649,7 @@ do
 			else
 				flagTimer:Start()
 			end
-			if msg:find(FACTION_ALLIANCE) or msg:find("Alliance") then -- workaround to Warmane's missing BG localizations
+			if msg:find(FACTION_ALLIANCE) or msg:find("Alliance") then -- workaround to 's missing BG localizations
 				flagTimer:SetColor({r=0, g=0, b=1})
 				flagTimer:UpdateIcon("Interface\\Icons\\INV_BannerPVP_02")
 			else
@@ -665,7 +665,7 @@ do
 		if self.Options.ShowFlagCarrier then
 			local msg, _, _, _, name = ...
 			if smatch(msg, L.FlagTaken) or smatch(msg, L.FlagTakenTC) then -- Eye of the Storm
-				local carrier = (name ~= "" and name) or smatch(msg, L.FlagTaken) or smatch(msg, L.FlagTakenTC) -- Missng arg5 on Warmane events
+				local carrier = (name ~= "" and name) or smatch(msg, L.FlagTaken) or smatch(msg, L.FlagTakenTC) -- Missng arg5 on  events
 				if carrier then
 					allyFlag = carrier
 					hordeFlag = nil
@@ -697,7 +697,7 @@ do
 		if self.Options.ShowFlagCarrier then
 			local msg, _, _, _, name = ...
 			if smatch(msg, L.FlagTaken) or smatch(msg, L.FlagTakenTC) then -- Eye of the Storm
-				local carrier = (name ~= "" and name) or smatch(msg, L.FlagTaken) or smatch(msg, L.FlagTakenTC) -- Missng arg5 on Warmane events
+				local carrier = (name ~= "" and name) or smatch(msg, L.FlagTaken) or smatch(msg, L.FlagTakenTC) -- Missng arg5 on  events
 				if carrier then
 					allyFlag = nil
 					hordeFlag = carrier
